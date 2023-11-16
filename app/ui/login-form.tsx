@@ -12,7 +12,7 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 
 export default function LoginForm() {
-  const [state, dispatch ] = useFormState(authenticate, undefined);
+  const [state, dispatch] = useFormState(authenticate, undefined);
   return (
     <form action={dispatch} className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
@@ -62,7 +62,6 @@ export default function LoginForm() {
         </div>
         <LoginButton />
         <div className="flex h-8 items-end space-x-1">
-          {/* Add form errors here */}
           {state === 'CredentialSignin' && (
             <>
               <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
